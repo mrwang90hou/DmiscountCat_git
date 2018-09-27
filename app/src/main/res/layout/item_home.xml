@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="15dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/item_hom_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_baby" />
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/sharemoney_bg"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/earn_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="可获得的佣金:￥"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/item_home_brokerage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="545"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3.0dip"
+            android:lines="2"
+            android:text="每天优惠多多的sdd大多数范德萨发大沙发大师傅水电费第三方范德萨范德萨发"
+            android:textColor="@color/product_title"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_home__current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_home_title"
+            android:layout_marginTop="5.0dip"
+            android:text="淘宝价:¥500"
+            android:textColor="@color/product_ori_price"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_home_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/item_home__current"
+            android:text="月销123"
+            android:textColor="@color/product_ori_price"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_home_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_home_coupon"
+            android:layout_alignBottom="@+id/item_home_coupon"
+            android:gravity="center"
+            android:text="¥ 129"
+            android:textColor="@color/product_coupon_price"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_home_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_home_volume"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/coupons_bg"
+            android:gravity="center"
+            android:text="券 ¥13"
+            android:textColor="@color/white"
+            android:textSize="8.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>
