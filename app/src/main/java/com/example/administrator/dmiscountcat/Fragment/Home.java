@@ -90,6 +90,7 @@ public class Home extends Fragment {
     recyclerView.setLayoutManager(manager);
     recyclerView.setAdapter(adapter);
         Log.d(TAG, "initdata: ");
+        Log.d(TAG, "initdata: ");
 
     }
 
