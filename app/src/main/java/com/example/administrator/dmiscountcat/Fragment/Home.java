@@ -91,6 +91,8 @@ public class Home extends Fragment {
     recyclerView.setAdapter(adapter);
         Log.d(TAG, "initdata: ");
         Log.d(TAG, "initdata: ");
+        Log.d(TAG, "initdata: ");
+        Log.d(TAG, "initdata: ");
 
     }
 
