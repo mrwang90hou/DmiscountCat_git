@@ -37,18 +37,18 @@ public class HomeAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
         VHolder vh = (VHolder) viewHolder;
         Glide.with(context).load(list.get(i).getImageURL()).into(vh.Image);
-        vh.brokerage.setText(list.get(i).getBrokerage());
-        vh.current.setText(list.get(i).getCurrent());
-        vh.volume.setText(list.get(i).getVolume());
-        vh.price.setText(list.get(i).getTitle());
-        vh.title.setText(list.get(i).getTitle());
+        vh.brokerage.setText(list.get(i).getBrokerage()+"");
+        vh.current.setText(list.get(i).getCurrent()+"");
+        vh.volume.setText(list.get(i).getVolume()+"");
+        vh.price.setText(list.get(i).getTitle()+"");
+        vh.title.setText(list.get(i).getTitle()+"");
     }
 
     @Override
     public int getItemCount() {
         return list.size();
     }
-    private class VHolder extends RecyclerView.ViewHolder{
+    public class VHolder extends RecyclerView.ViewHolder{
         private ImageView Image ;  //展示图片
         private TextView brokerage;   //佣金
         private  TextView title;  //标题
@@ -56,7 +56,7 @@ public class HomeAdapter extends RecyclerView.Adapter {
         private TextView volume;  //销量
         private TextView price;   //券后价
         private TextView coupon;   //优惠价格
-        public VHolder(@NonNull View itemView) {
+   public VHolder(@NonNull View itemView) {
             super(itemView);
             Image = itemView.findViewById(R.id.item_hom_image);
             brokerage = itemView.findViewById(R.id.item_home_brokerage);

@@ -73,7 +73,7 @@ public class Home extends Fragment {
     //设置recy
     recyclerView = view.findViewById(R.id.home_recy);
     list = new ArrayList<>();
-    bean = new HomeBean();
+    setBean();
     list.add(bean);
     list.add(bean);
     list.add(bean);
@@ -122,5 +122,19 @@ public class Home extends Fragment {
         image.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537873612128&di=b1be21409d071223c74fb741cce1dc54&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F05%2F28%2F31N58PICg4Z_1024.jpg");
         image.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537873612128&di=151cd20b046361d1e6b935c0b39ade63&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F16%2F73%2F95%2F63E58PICQh7_1024.jpg");
         return image;
+    }
+    /**
+     * 设置list
+     */
+    public void setBean(){
+        bean = new HomeBean();
+        bean.setBrokerage(12);
+        bean.setCoupon(88);
+        bean.setCurrent(55);
+        bean.setPrice(665);
+        bean.setTitle("woshibiaoti");
+        bean.setVolume(12);
+        bean.setImageURL("http://scimg.jb51.net/allimg/151127/14-15112G0124E52.jpg");
+
     }
 }
