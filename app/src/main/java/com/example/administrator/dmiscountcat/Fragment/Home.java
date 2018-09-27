@@ -3,6 +3,7 @@ package com.example.administrator.dmiscountcat.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -43,7 +44,7 @@ public class Home extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =   inflater.inflate(R.layout.fragment_home, container, false);
         initdata(view);
@@ -87,8 +88,8 @@ public class Home extends Fragment {
     manager = new GridLayoutManager(getContext(),2);
 
     recyclerView.setLayoutManager(manager);
-
     recyclerView.setAdapter(adapter);
+        Log.d(TAG, "initdata: ");
 
     }
 
@@ -97,11 +98,10 @@ public class Home extends Fragment {
     public class GlideImageLoader extends ImageLoader{
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
-            /**
+            /*
              1.图片加载器由自己选择，这里不限制，只是提供几种使用方法
              2.返回的图片路径为Object类型，由于不能确定你到底使用的那种图片加载器，
              传输的到的是什么格式，那么这种就使用Object接收和返回，你只需要强转成你传输的类型就行，
-             切记不要胡乱强转！
              */
             Glide.with(context).load(path).into(imageView);
         }
