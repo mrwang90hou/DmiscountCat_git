@@ -128,12 +128,12 @@ public class Home extends Fragment {
      */
     public void setBean(){
         bean = new HomeBean();
-        bean.setBrokerage(12);
-        bean.setCoupon(88);
-        bean.setCurrent(55);
-        bean.setPrice(665);
-        bean.setTitle("woshibiaoti");
-        bean.setVolume(12);
+        bean.setBrokerage(10);
+        bean.setCoupon(80);
+        bean.setCurrent(100);
+        bean.setPrice(80);
+        bean.setTitle("标题");
+        bean.setVolume(9999);
         bean.setImageURL("http://scimg.jb51.net/allimg/151127/14-15112G0124E52.jpg");
 
     }

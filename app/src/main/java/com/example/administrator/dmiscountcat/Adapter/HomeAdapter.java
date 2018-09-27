@@ -37,11 +37,12 @@ public class HomeAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
         VHolder vh = (VHolder) viewHolder;
         Glide.with(context).load(list.get(i).getImageURL()).into(vh.Image);
-        vh.brokerage.setText(list.get(i).getBrokerage()+"");
-        vh.current.setText(list.get(i).getCurrent()+"");
-        vh.volume.setText(list.get(i).getVolume()+"");
-        vh.price.setText(list.get(i).getTitle()+"");
+        vh.brokerage.setText(list.get(i).getBrokerage()+"¥");
+        vh.current.setText("原价："+list.get(i).getCurrent()+"¥");
+        vh.volume.setText("销量："+list.get(i).getVolume()+"件");
+        vh.price.setText("券后价："+list.get(i).getPrice()+"¥");
         vh.title.setText(list.get(i).getTitle()+"");
+        vh.coupon.setText("优惠价："+list.get(i).getCoupon()+"¥");
     }
 
     @Override
