@@ -14,6 +14,7 @@ import com.bottom.PageNavigationView;
 import com.bottom.item.BaseTabItem;
 import com.bottom.item.NormalItemView;
 import com.bottom.listener.OnTabItemSelectedListener;
+import com.example.administrator.dmiscountcat.Fragment.Flassify;
 import com.example.administrator.dmiscountcat.Fragment.Home;
 import com.youth.banner.Banner;
 
@@ -39,8 +40,12 @@ public class MainActivity extends AppCompatActivity {
         //把碎片放进 viewpager
         viewPager = findViewById(R.id.viewPage);
         fragmentList = new ArrayList<>();
+
         Fragment home = new Home();
+        Fragment flassify = new Flassify();
+
         fragmentList.add(home);
+        fragmentList.add(flassify);
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(fm) {
@@ -95,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
             public void onSelected(int i, int i1) {
                 //选中时触发
                 Log.d(TAG, ""+i);
+                switch (i){
+                    case 0:viewPager.setCurrentItem(0);break;
+                    case 1:viewPager.setCurrentItem(1);break;
+                }
             }
 
             @Override
