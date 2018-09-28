@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
    private void showPage(){
         PageNavigationView.CustomBuilder custom = page.custom();
         NavigationController build = custom
-               .addItem(newItem(R.mipmap.tab_home_n,R.mipmap.tab_home_s,"首页"))
-               .addItem(newItem(R.mipmap.tab_ping_n,R.mipmap.tab_ping_s,"分类"))
+               .addItem(newItem(R.mipmap.home_page_icon01,R.mipmap.tab_home_s,"首页"))
+               .addItem(newItem(R.mipmap.home_page_icon02,R.mipmap.home_page_icon_1,"分类"))
                .addItem(newItem(R.mipmap.tab_video_n,R.mipmap.video_play,"搜索"))
                .addItem(newItem(R.mipmap.tab_home_n,R.mipmap.tab_home_s,"动态"))
                .addItem(newItem(R.mipmap.tab_mine_n,R.mipmap.tab_mine_n,"我的"))
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         NormalItemView normalItemView = new NormalItemView(this);
         normalItemView.initialize(drawable,checkedDrawable,text);
         normalItemView.setTextDefaultColor(Color.GRAY);
-        normalItemView.setTextCheckedColor(0xFF009688);
+        normalItemView.setTextCheckedColor(getResources().getColor(R.color.orangge));
         return normalItemView;
     }
 }
