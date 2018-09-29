@@ -3,6 +3,7 @@ package com.example.administrator.dmiscountcat.Adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,8 @@ public class Flassify_OneAdapter extends RecyclerView.Adapter {
     private List<String> list;
     private LayoutInflater inflater;
     private  OnItemClickListen listen;
-
+    private  View view;  //对第一个item view的引用
+    private boolean first = true;  //当点击list的item时，把第一个item的背景颜色改成false
     public Flassify_OneAdapter(List<String> list,Context context){
         this.context = context;
         this.list = list;
@@ -40,10 +42,13 @@ public class Flassify_OneAdapter extends RecyclerView.Adapter {
             @Override
             public void onClick(View v) {
                 if (listen != null) listen.itemClick(v,i);
+                if (first){view.setSelected(false);first=false;}
             }
         });
         if (i ==0){
             vh.color.setSelected(true);
+            view = vh.color;
+            Log.d("001", "onBindViewHolder: ");
         }
     }
 

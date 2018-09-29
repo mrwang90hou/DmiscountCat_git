@@ -8,14 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bottom.PageNavigationView;
 import com.bumptech.glide.Glide;
 import com.example.administrator.dmiscountcat.Bean.FlassifyBean;
 import com.example.administrator.dmiscountcat.R;
-
 import java.util.List;
-
 public class Flassify_TwoAdapter extends RecyclerView.Adapter {
     private Context context;
     private List<FlassifyBean> list;
