@@ -36,7 +36,8 @@ public class HomeAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
         VHolder vh = (VHolder) viewHolder;
-        Glide.with(context).load(list.get(i).getImageURL()).into(vh.Image);
+       // Glide.with(context).load(list.get(i).getImageURL()).into(vh.Image);
+        vh.Image.setImageResource(R.mipmap.product_details02);
         vh.brokerage.setText(list.get(i).getBrokerage()+"¥");
         vh.current.setText("原价："+list.get(i).getCurrent()+"¥");
         vh.volume.setText("销量："+list.get(i).getVolume()+"件");

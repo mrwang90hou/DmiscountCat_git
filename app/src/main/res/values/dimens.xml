@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="status_bar">0dp</dimen>  //4.4版本后使用
-    
+    <dimen name="purchase_title_text">18sp</dimen>  //淘抢购 开抢字体 大小
+    <dimen name="purchase_title_text2">23sp</dimen>  //淘抢购 数字字体 大小
+
+
+    <!-- 首页导航栏 -->
+    <dimen name="home_page_icon">20dp</dimen>   //icon 的大小
+    <dimen name="home_page_icon_text">5dp</dimen>   //icon 与文字的距离
+    <dimen name="home_page_text">12sp</dimen>   // 文字 大小
 </resources>

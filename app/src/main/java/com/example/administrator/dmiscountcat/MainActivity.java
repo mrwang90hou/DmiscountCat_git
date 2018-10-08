@@ -1,31 +1,34 @@
 package com.example.administrator.dmiscountcat;
 
-import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.bottom.NavigationController;
-import com.bottom.PageNavigationView;
-import com.bottom.item.BaseTabItem;
-import com.bottom.item.NormalItemView;
-import com.bottom.listener.OnTabItemSelectedListener;
+import com.example.administrator.dmiscountcat.Fragment.Collection;
 import com.example.administrator.dmiscountcat.Fragment.Flassify;
 import com.example.administrator.dmiscountcat.Fragment.Home;
-import com.youth.banner.Banner;
+import com.example.administrator.dmiscountcat.Fragment.Purchase;
+import com.example.administrator.dmiscountcat.Fragment.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-    private PageNavigationView page;//底部导航栏
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     private  String TAG = "001";
     private ViewPager viewPager;   //碎片容器
     private List<Fragment> fragmentList;
+    private LinearLayout home,flassify,collection,purchase,user;
+    private TextView homeText,flassifyText,collectionText,purchaseText,usertext;
+    private ImageView homeImage,flassifyImage,collectionImage,purchaseImage,userImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,19 +36,49 @@ public class MainActivity extends AppCompatActivity {
         initdata();
     }
 
-    /**
-     * 初始化
-     */
+
     private void initdata(){
+
+        home = findViewById(R.id.main_home1);
+        homeText = findViewById(R.id.main_home1_2);
+        homeImage = findViewById(R.id.main_home1_1);
+        flassify = findViewById(R.id.main_home2);
+        flassifyImage = findViewById(R.id.main_home2_1);
+        flassifyText = findViewById(R.id.main_home2_2);
+        purchase = findViewById(R.id.main_home3);
+        purchaseImage = findViewById(R.id.main_home3_1);
+        purchaseText = findViewById(R.id.main_home3_2);
+        collection = findViewById(R.id.main_home4);
+        collectionImage = findViewById(R.id.main_home4_1);
+        collectionText = findViewById(R.id.main_home4_2);
+        user = findViewById(R.id.main_home5);
+        userImage = findViewById(R.id.main_home5_1);
+        usertext = findViewById(R.id.main_home5_2);
+
+        home.setOnClickListener(this);
+        flassify.setOnClickListener(this);
+        collection.setOnClickListener(this);
+        purchase.setOnClickListener(this);
+        user.setOnClickListener(this);
+
+        homeText.setSelected(true);
+        homeImage.setSelected(true);
+
         //把碎片放进 viewpager
         viewPager = findViewById(R.id.viewPage);
         fragmentList = new ArrayList<>();
 
         Fragment home = new Home();
         Fragment flassify = new Flassify();
+        Fragment purchase = new Purchase();
+        Fragment collection = new Collection();
+        Fragment user = new User();
 
         fragmentList.add(home);
         fragmentList.add(flassify);
+        fragmentList.add(purchase);
+        fragmentList.add(collection);
+        fragmentList.add(user);
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(fm) {
@@ -65,11 +98,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
 
+
             }
 
             @Override
             public void onPageSelected(int i) {
 
+                setpage();
+                Log.d(TAG, "onPageScrolled: "+i);
+                switch (i){
+                    case 0: homeImage.setSelected(true);homeText.setSelected(true);break;
+                    case 1: flassifyImage.setSelected(true);flassifyText.setSelected(true); break;
+                    case 2: purchaseImage.setSelected(true);purchaseText.setSelected(true);  break;
+                    case 3: collectionText.setSelected(true);collectionImage.setSelected(true); break;
+                    case 4: userImage.setSelected(true);usertext.setSelected(true); break;
+                }
             }
 
             @Override
@@ -77,49 +120,39 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //显示底部导航栏
-        page = findViewById(R.id.page);
-        showPage();
+
+
 
     }
 
-    /**
-     * 构造底部导航栏
-     */
-   private void showPage(){
-        PageNavigationView.CustomBuilder custom = page.custom();
-        NavigationController build = custom
-               .addItem(newItem(R.mipmap.home_page_icon01,R.mipmap.tab_home_s,"首页"))
-               .addItem(newItem(R.mipmap.home_page_icon02,R.mipmap.home_page_icon_1,"分类"))
-               .addItem(newItem(R.mipmap.tab_video_n,R.mipmap.video_play,"搜索"))
-               .addItem(newItem(R.mipmap.tab_home_n,R.mipmap.tab_home_s,"动态"))
-               .addItem(newItem(R.mipmap.tab_mine_n,R.mipmap.tab_mine_n,"我的"))
-                .build();
-        build.addTabItemSelectedListener(new OnTabItemSelectedListener() {
-            @Override
-            public void onSelected(int i, int i1) {
-                //选中时触发
-                Log.d(TAG, ""+i);
-                switch (i){
-                    case 0:viewPager.setCurrentItem(0);break;
-                    case 1:viewPager.setCurrentItem(1);break;
-                }
-            }
 
-            @Override
-            public void onRepeat(int i) {
-                //重复选中时触发
-            }
-        });
+    //初始化底部导航栏
+    private void setpage(){
+        Log.d(TAG, "setpage: 执行");
+    homeImage.setSelected(false);
+    homeText.setSelected(false);
+    flassifyText.setSelected(false);
+    flassifyImage.setSelected(false);
+    usertext.setSelected(false);
+    userImage.setSelected(false);
+    collectionImage.setSelected(false);
+    collectionText.setSelected(false);
+    purchaseText.setSelected(false);
+    purchaseImage.setSelected(false);
+
     }
 
-    //自定义tab
-    private BaseTabItem newItem(int drawable, int checkedDrawable, String text)
-    {
-        NormalItemView normalItemView = new NormalItemView(this);
-        normalItemView.initialize(drawable,checkedDrawable,text);
-        normalItemView.setTextDefaultColor(Color.GRAY);
-        normalItemView.setTextCheckedColor(getResources().getColor(R.color.orangge));
-        return normalItemView;
+    @Override
+    public void onClick(View v) {
+        setpage();
+        Log.d(TAG, "onClick: "+R.id.main_home3);
+        switch (v.getId()){
+            case R.id.main_home1: homeImage.setSelected(true);homeText.setSelected(true);viewPager.setCurrentItem(0);break;
+            case R.id.main_home2: flassifyImage.setSelected(true);flassifyText.setSelected(true); viewPager.setCurrentItem(1); break;
+            case R.id.main_home4: collectionText.setSelected(true);collectionImage.setSelected(true);  viewPager.setCurrentItem(3);break;
+            case R.id.main_home5: userImage.setSelected(true);usertext.setSelected(true);viewPager.setCurrentItem(4); break;
+            case R.id.main_home3: purchaseImage.setSelected(true);purchaseText.setSelected(true);viewPager.setCurrentItem(2);break;
+            default:Log.d(TAG, "最后: "+v.getId());
+        }
     }
 }

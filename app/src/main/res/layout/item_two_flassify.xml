@@ -15,7 +15,6 @@
         android:id="@+id/item_two_flassify_title"
         android:textColor="@color/black"
         android:text="耳机"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>
