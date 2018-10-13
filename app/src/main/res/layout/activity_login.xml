@@ -6,8 +6,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    >
+    android:paddingRight="16dp">
     <!--tools:context=".view.Login.LoginActivity"-->
     <ScrollView
         android:id="@+id/sv_login_form"
