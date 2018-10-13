@@ -7,8 +7,8 @@
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context=".view.Login.LoginActivity">
-
+    >
+    <!--tools:context=".view.Login.LoginActivity"-->
     <ScrollView
         android:id="@+id/sv_login_form"
         android:layout_width="match_parent"
@@ -64,11 +64,11 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="注册 / 登录"
-                    android:textColor="@android:color/user_icon_1"
+                    android:textColor="@color/blue"
                     android:textSize="14sp" />
 
             </LinearLayout>
-
+            <!--android:textColor="@android:color/user_icon_1"-->
         </LinearLayout>
     </ScrollView>
 
