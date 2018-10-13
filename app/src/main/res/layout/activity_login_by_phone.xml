@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <!--android:background="@mipmap/bg_login"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--tools:context=".view.Login.LoginActivity"-->
+
+    <!--<include layout="@layout/toolbar_custom" />-->
+
+
+
+    <ScrollView
+        android:id="@+id/sv_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_login_logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <!--android:background="@drawable/bg_blue_cor_stro"-->
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_login_phone" />
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="textVisiblePassword"
+                    android:digits="@string/filter_code"
+                    android:hint="请输入手机号码"
+                    android:textFontWeight="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_clear_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:srcCompat="@color/product_ori_price" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <!--android:background="@drawable/bg_blue_cor_stro"-->
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_login_lock" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:hint="请输入6-32位密码"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_clear_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!--app:srcCompat="@drawable/ic_clear_black_24dp"-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login_submit"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:background="@mipmap/btn_2"
+                android:text="登 录"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btn_login_style_submit"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:background="@mipmap/btn_2"
+                android:text="登录方式"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

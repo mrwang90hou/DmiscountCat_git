@@ -208,5 +208,7 @@
     <color name="purchase_yellow">#FFBE03</color><!---->
     <color name="purchase_background">#F4F4F4</color><!---->
 
+    <color name="navigation_bg_color">#FF7748</color>
+
 </resources>
 
