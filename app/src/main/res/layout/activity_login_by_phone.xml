@@ -6,15 +6,11 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-
+    <include layout="@layout/toolbar_custom" />
     <!--android:background="@mipmap/bg_login"-->
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
     <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
     <!--tools:context=".view.Login.LoginActivity"-->
-
-    <!--<include layout="@layout/toolbar_custom" />-->
-
-
 
     <ScrollView
         android:id="@+id/sv_login_form"
@@ -25,15 +21,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="40dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@mipmap/ic_login_logo" />
-
+            android:orientation="vertical"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
@@ -101,12 +91,21 @@
 
                 <!--app:srcCompat="@drawable/ic_clear_black_24dp"-->
             </LinearLayout>
-
+            <Button
+                android:id="@+id/btn_loginByPhoneMessage_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="2dp"
+                android:background="#00000000"
+                android:text="短信验证登录"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/login_btn_color"/>
             <Button
                 android:id="@+id/btn_login_submit"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
                 android:background="@mipmap/btn_2"
                 android:text="登 录"
                 android:textSize="20sp"
@@ -116,8 +115,8 @@
             <Button
                 android:id="@+id/btn_login_style_submit"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
                 android:background="@mipmap/btn_2"
                 android:text="登录方式"
                 android:textSize="20sp"

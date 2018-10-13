@@ -209,6 +209,7 @@
     <color name="purchase_background">#F4F4F4</color><!---->
 
     <color name="navigation_bg_color">#FF7748</color>
+    <color name="login_btn_color">#39AFFF</color>
 
 </resources>
 

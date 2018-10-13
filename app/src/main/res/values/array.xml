@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="save_format">
+        <item>PNG</item>
+        <item>JPEG</item>
+        <item>WEBP</item>
+    </string-array>
+
+    <string-array name="crop_shapes">
+        <item>矩形</item>
+        <item>圆形</item>
+    </string-array>
+
+    <string-array name="message_type_titles">
+        <item>系统消息</item>
+        <item>我的消息</item>
+    </string-array>
+
+</resources>
