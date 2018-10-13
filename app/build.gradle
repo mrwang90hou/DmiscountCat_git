@@ -34,23 +34,24 @@ dependencies {
 
 
 //    compile 'com.github.vondear:RxTools:v1.7.3.4'//请替换成上方 JitPack 最新的版本号
-//    //基础工具库
-//    implementation "com.github.vondear.RxTool:RxKit:v2.2.7"
-//    //UI库
-//    implementation "com.github.vondear.RxTool:RxUI:v2.2.7"
-//    //相机库
-//    implementation 'com.github.vondear.RxTool:RxCamera:v2.2.7'
+    //基础工具库
+    implementation "com.github.vondear.RxTool:RxKit:v2.2.7"
+    //UI库
+    implementation "com.github.vondear.RxTool:RxUI:v2.2.7"
+    //相机库
+    implementation 'com.github.vondear.RxTool:RxCamera:v2.2.7'
 //    //功能库（Zxing扫描与生成二维码条形码 支付宝 微信）
 //    implementation "com.github.vondear.RxTool:RxFeature:v2.2.7"
 //    //ArcGis For Android工具库（API：100.1以上版本）
 //    implementation "com.github.vondear.RxTool:RxArcGisKit:v2.2.7"
-//
+
     repositories {
         mavenCentral()
         maven {
             url  'http://dl.bintray.com/gigamole/maven/'
         }
     }
-    compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:+'
+//    compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:+'
+    implementation 'com.github.devlight.navigationtabstrip:navigationtabstrip:+'
 
 }

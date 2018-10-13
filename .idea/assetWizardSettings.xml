@@ -19,7 +19,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../文良切图/洛忆补充/lock.png" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../文良切图/洛忆补充/启动页面/LaunchScreen_icon.png" />
                                       <entry key="outputName" value="ic_login_lock" />
                                     </map>
                                   </option>
@@ -32,8 +32,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../文良切图/洛忆补充/iphone.png" />
-                                      <entry key="outputName" value="ic_login_phone" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../文良切图/洛忆补充/nothing_message.png" />
+                                      <entry key="outputName" value="nothing_message" />
                                     </map>
                                   </option>
                                 </PersistentState>
