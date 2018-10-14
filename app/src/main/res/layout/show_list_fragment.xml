@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:gravity="center">
+
+    <LinearLayout
+
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <!--图片位置放在这里才有效果-->
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="390dp"
+            android:background="@color/white"
+            android:fadingEdge="none"
+            android:overScrollMode="never"/>
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+
+
+</FrameLayout>
