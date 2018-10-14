@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.Adapter;
+package com.example.administrator.dmiscountcat.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.administrator.dmiscountcat.Bean.HomeBean;
 import com.example.administrator.dmiscountcat.R;
 
