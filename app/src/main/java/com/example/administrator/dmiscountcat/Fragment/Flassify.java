@@ -10,11 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.administrator.dmiscountcat.Adapter.Flassify_OneAdapter;
-import com.example.administrator.dmiscountcat.Adapter.Flassify_TwoAdapter;
+import com.example.administrator.dmiscountcat.adapter.Flassify_OneAdapter;
+import com.example.administrator.dmiscountcat.adapter.Flassify_TwoAdapter;
 import com.example.administrator.dmiscountcat.Bean.FlassifyBean;
 import com.example.administrator.dmiscountcat.R;
-import com.youth.banner.Banner;
 
 import java.util.ArrayList;
 import java.util.List;

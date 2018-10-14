@@ -32,7 +32,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
 
-
 //    compile 'com.github.vondear:RxTools:v1.7.3.4'//请替换成上方 JitPack 最新的版本号
     //基础工具库
     implementation "com.github.vondear.RxTool:RxKit:v2.2.7"
@@ -48,7 +47,7 @@ dependencies {
     repositories {
         mavenCentral()
         maven {
-            url  'http://dl.bintray.com/gigamole/maven/'
+            url 'http://dl.bintray.com/gigamole/maven/'
         }
     }
 //    compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:+'

@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.Adapter;
+package com.example.administrator.dmiscountcat.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

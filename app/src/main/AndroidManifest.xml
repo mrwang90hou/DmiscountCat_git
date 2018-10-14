@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.IncomeStatementActivity" />
+        <activity android:name=".activity.HelpActivity"></activity>
+        <activity android:name=".activity.AllRecordsActivity"></activity>
     </application>
 
 </manifest>

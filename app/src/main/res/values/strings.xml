@@ -60,4 +60,11 @@
 
     <string name="mi_done">Done</string>
     <!--<string name="base_url">http://192.168.0.232/handler/</string>-->
+
+
+    <!--titile-->
+    <string name="title_income_statement">收益报表</string>
+    <string name="title_help">帮助中心</string>
+
+
 </resources>
