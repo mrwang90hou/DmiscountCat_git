@@ -15,7 +15,7 @@
         app:nts_active_color="@color/navigation_bg_color"
         app:nts_color="@color/navigation_bg_color"
         app:nts_corners_radius="1dp"
-        app:nts_inactive_color="#ff1a1e23"
+        app:nts_inactive_color="#A0A0A0"
         app:nts_titles="@array/message_type_titles"
         app:nts_size="15sp"
         app:nts_weight="3dp" />

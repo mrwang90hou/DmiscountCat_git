@@ -16,4 +16,11 @@
         <item>我的消息</item>
     </string-array>
 
+    <string-array name="activity_home_page08_view_titles">
+        <item>现金红包</item>
+        <item>话费流量</item>
+        <item>视频会员</item>
+        <item>出行外卖</item>
+    </string-array>
+
 </resources>
