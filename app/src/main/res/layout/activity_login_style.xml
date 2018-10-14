@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="ccc"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
@@ -27,7 +27,6 @@
                 android:layout_marginBottom="40dp"
                 android:layout_marginTop="60dp"
                 android:src="@mipmap/ic_login_logo" />
-
             <Button
                 android:id="@+id/btn_login_submit1"
                 android:layout_width="match_parent"
