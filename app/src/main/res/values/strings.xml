@@ -74,6 +74,15 @@
 
 
 
+    <string name="title_coupons">优惠券</string>
+
+
+
+
+
+
+
+
     <!--goodsDeatils-->
     <string name="back_top">返回顶部</string>
     <string name="add_shopping_cart">加入购物车</string>
