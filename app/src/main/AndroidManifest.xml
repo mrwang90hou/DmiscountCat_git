@@ -27,9 +27,7 @@
         <activity android:name=".activity.home.NewTutorialActivity"/>
         <activity android:name=".activity.home.WomanclothingActivity"/>
         <activity android:name=".activity.home.ZeroPackageActivity"/>
-
-
-
+        <activity android:name=".activity.home.MessageNotiActivity"/>
 
 
         <activity android:name=".activity.goodsDetail.ProductInfoActivity">

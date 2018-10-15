@@ -53,6 +53,9 @@ public class Home extends BaseFragment {
 
     Activity activity;
 
+
+
+    /*主页10个功能模块儿按钮*/
     TextView textView_page01;
     TextView textView_page02;
     TextView textView_page03;
@@ -66,7 +69,7 @@ public class Home extends BaseFragment {
 
 
 
-//    RecyclerView homeProductInfoDetails;
+    RecyclerView homeProductInfoDetails;
 
 //    LinearLayout test;
 
@@ -78,22 +81,13 @@ public class Home extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         activity = getActivity();
-//        test = getViewById(R.id.linearLayoutTest);
-//        test.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                startActivity(new Intent(activity,ProductInfoActivity.class));
-//                startActivity(new Intent(activity, BrowseRecordsActivity.class));
-//            }
-//        });
-
-//        test.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(activity, IncomeStatementActivity.class));
-//            }
-//        });
-//        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        homeProductInfoDetails = getViewById(R.id.home_recy);
+        homeProductInfoDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, ProductInfoActivity.class));
+            }
+        });
         initdata(view);
         textView_page01= getViewById(R.id.home_page01);
         textView_page02= getViewById(R.id.home_page02);
@@ -109,7 +103,7 @@ public class Home extends BaseFragment {
         textView_page01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity, DailyLotteryActivity.class));
+                startActivity(new Intent(activity, ProductInfoActivity.class));
             }
         });
         textView_page02.setOnClickListener(new View.OnClickListener() {
@@ -171,7 +165,6 @@ public class Home extends BaseFragment {
     protected int getLayoutId() {
         return R.layout.fragment_home;
     }
-
 //    @Override
 //    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
 //                             Bundle savedInstanceState) {

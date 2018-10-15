@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.activity.home;
+package com.example.administrator.dmiscountcat.activity;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,65 +14,61 @@ import com.example.administrator.dmiscountcat.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class ZeroPackageActivity extends BaseActivity {
-
-
+//优惠券
+public class CouponsActivity extends BaseActivity {
     private ImageView titleLeft;
     private TextView titleText;
     private RelativeLayout rlSecTitleLayout;
-
-
     private List<BrowseRecordsBean> list = new ArrayList<>();
     private BrowseRecordsAdapter adapter;
     private RecyclerView rvBrowseRecords;
     private ImageView ivSettings;
-
-
-//
-//    @Override
+    @Override
     protected int getFragmentContentId() {
-        return R.layout.activity_home_page06_view;
+        return R.layout.activity_coupons;
     }
-//
+
     @Override
     public void setContentView() {
-        setContentView(R.layout.activity_home_page06_view);
+        setContentView(R.layout.activity_coupons);
     }
 
     @Override
     public void initActivity() {
-
-    }
-
-    @Override
-    public void initView() {
         titleLeft = getViewById(R.id.title_sec_left);
         titleText = getViewById(R.id.title_text);
         titleLeft.setImageDrawable(getResources().getDrawable(R.drawable.home_icon_righttop_return02));
         rlSecTitleLayout = getViewById(R.id.sec_title_layout);
-        rlSecTitleLayout.setBackgroundColor(getResources().getColor(R.color.navigation_bg_color));
+        rlSecTitleLayout.setBackgroundColor(getResources().getColor(R.color.main_title_bg));
         titleLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
-        titleText.setText(getResources(R.string.home_icon6));
-        titleText.setTextColor(getResources().getColor(R.color.white));
-        /**/
-        rvBrowseRecords = getViewById(R.id.rc_zero_package);
+        titleText.setText(getResources(R.string.title_coupons));
+        rvBrowseRecords = getViewById(R.id.rv_browse_records);
         ivSettings = getViewById(R.id.iv_settings);
         ivSettings.setVisibility(View.GONE);
         titleText.setTextColor(getResources().getColor(R.color.white));
         for(int i=0;i<5;i++){
+            if(i == 0){
+                list.add(new BrowseRecordsBean(BrowseRecordsBean.TYPE_TIME));
+            }else{
                 list.add(new BrowseRecordsBean(BrowseRecordsBean.TYPE_DATA));
+            }
         }
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvBrowseRecords.setLayoutManager(layoutManager);
         adapter = new BrowseRecordsAdapter(list,this);
         rvBrowseRecords.setAdapter(adapter);
+    }
+
+    @Override
+    public void initView() {
+
+
     }
 
     @Override

@@ -115,7 +115,7 @@
                 android:layout_width="15dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/home_icon06_pageview_step01"
+                android:drawableTop="@mipmap/home_icon06_pageview_step02"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:text="好友注册" />
@@ -128,26 +128,28 @@
                 android:gravity="center"/>
 
             <TextView
-                android:layout_width="16dp"
+                android:layout_width="17dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/home_icon06_pageview_step01"
+                android:drawableTop="@mipmap/home_icon06_pageview_step03"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:text="申请0元包裹" />
 
         </LinearLayout>
         <Button
+            android:id="@+id/detailed_tutorial_btn"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/status_bar_height"
             android:background="@mipmap/home_icon06_pageview_btn_detailed_tutorial"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/collection_recy"
+        android:id="@+id/rc_zero_package"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="10dp"
