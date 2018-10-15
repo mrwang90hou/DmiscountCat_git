@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
-
+//package com.holyn.guofang.bean;
 public abstract class BaseActivity extends AppCompatActivity {
 
     @Override

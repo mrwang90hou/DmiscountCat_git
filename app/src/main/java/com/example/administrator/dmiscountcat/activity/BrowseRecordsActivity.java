@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.administrator.dmiscountcat.Bean.BrowseRecordsBean;
 import com.example.administrator.dmiscountcat.R;
-import com.example.administrator.dmiscountcat.adapter.BrowseRecordsAdapter;
+import com.example.administrator.dmiscountcat.Adapter.BrowseRecordsAdapter;
 import com.example.administrator.dmiscountcat.base.BaseActivity;
 
 import java.util.ArrayList;

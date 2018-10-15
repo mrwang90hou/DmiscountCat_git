@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.adapter;
+package com.example.administrator.dmiscountcat.Adapter;
 
 import android.app.Activity;
 
@@ -14,7 +14,7 @@ public class BrowseRecordsAdapter extends BaseMultiItemQuickAdapter<BrowseRecord
     Activity activity;
     public BrowseRecordsAdapter(List data, Activity activity) {
         super(data);
-        this.activity =   activity;
+        this.activity = activity;
         addItemType(BrowseRecordsBean.TYPE_TIME, R.layout.item_browse_records_time);
         addItemType(BrowseRecordsBean.TYPE_DATA, R.layout.item_browse_records_data);
     }

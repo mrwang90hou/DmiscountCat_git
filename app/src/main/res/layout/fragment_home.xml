@@ -4,10 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:focusable="true"
     android:orientation="vertical"
-    android:focusableInTouchMode="true"
     tools:context=".Fragment.Home">
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+
     <View
         android:background="@color/home_sousuo"
         android:layout_width="match_parent"
@@ -72,11 +74,14 @@
                 android:src="@mipmap/home_banner"/>
 
             <LinearLayout
+
+                android:id="@+id/linearLayoutTest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/home_page01"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -85,6 +90,7 @@
                     android:text="@string/home_icon1" />
 
                 <TextView
+                    android:id="@+id/home_page02"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,6 +99,7 @@
                     android:text="@string/home_icon2" />
 
                 <TextView
+                    android:id="@+id/home_page03"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -101,6 +108,7 @@
                     android:text="@string/home_icon3" />
 
                 <TextView
+                    android:id="@+id/home_page04"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -109,6 +117,7 @@
                     android:text="@string/home_icon4" />
 
                 <TextView
+                    android:id="@+id/home_page05"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -124,6 +133,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/home_page06"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -132,6 +142,7 @@
                     android:text="@string/home_icon6" />
 
                 <TextView
+                    android:id="@+id/home_page07"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -140,6 +151,7 @@
                     android:text="@string/home_icon7" />
 
                 <TextView
+                    android:id="@+id/home_page08"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -148,6 +160,7 @@
                     android:text="@string/home_icon8" />
 
                 <TextView
+                    android:id="@+id/home_page09"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -156,6 +169,7 @@
                     android:text="@string/home_icon9" />
 
                 <TextView
+                    android:id="@+id/home_page10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

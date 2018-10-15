@@ -212,6 +212,9 @@
 
     <color name="navigation_bg_color">#FF7748</color>
     <color name="login_btn_color">#39AFFF</color>
+    <color name="colorTitle">#FF7198</color>
+    <color name="colorSomber">#555555</color>
 
+    <color name="font_second_color">#666666</color>
 </resources>
 

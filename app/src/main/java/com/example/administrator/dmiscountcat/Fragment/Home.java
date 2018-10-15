@@ -1,7 +1,9 @@
 package com.example.administrator.dmiscountcat.Fragment;
 
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -12,11 +14,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.administrator.dmiscountcat.adapter.HomeAdapter;
+import com.example.administrator.dmiscountcat.Adapter.HomeAdapter;
 import com.example.administrator.dmiscountcat.Bean.HomeBean;
 import com.example.administrator.dmiscountcat.R;
+import com.example.administrator.dmiscountcat.activity.AllRecordsActivity;
+import com.example.administrator.dmiscountcat.activity.BrowseRecordsActivity;
+import com.example.administrator.dmiscountcat.activity.HelpActivity;
+import com.example.administrator.dmiscountcat.activity.IncomeStatementActivity;
+import com.example.administrator.dmiscountcat.activity.goodsDetail.ProductInfoActivity;
+import com.example.administrator.dmiscountcat.activity.home.DailyLotteryActivity;
+import com.example.administrator.dmiscountcat.activity.home.NewTutorialActivity;
+import com.example.administrator.dmiscountcat.activity.home.TaoCatWelfareActivity;
+import com.example.administrator.dmiscountcat.activity.home.WomanclothingActivity;
+import com.example.administrator.dmiscountcat.activity.home.ZeroPackageActivity;
+import com.example.administrator.dmiscountcat.base.BaseFragment;
 import com.youth.banner.Banner;
 import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
@@ -27,7 +42,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Home extends Fragment {
+public class Home extends BaseFragment {
     private Banner banner;
     private String TAG="001";
     private GridLayoutManager manager;
@@ -36,18 +51,145 @@ public class Home extends Fragment {
     private HomeBean bean;
     private List<HomeBean> list;
 
+    Activity activity;
+
+    TextView textView_page01;
+    TextView textView_page02;
+    TextView textView_page03;
+    TextView textView_page04;
+    TextView textView_page05;
+    TextView textView_page06;
+    TextView textView_page07;
+    TextView textView_page08;
+    TextView textView_page09;
+    TextView textView_page10;
+
+
+
+//    RecyclerView homeProductInfoDetails;
+
+//    LinearLayout test;
+
+
     public Home() {
         // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view =   inflater.inflate(R.layout.fragment_home, container, false);
+    protected void initView(View view, Bundle savedInstanceState) {
+        activity = getActivity();
+//        test = getViewById(R.id.linearLayoutTest);
+//        test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                startActivity(new Intent(activity,ProductInfoActivity.class));
+//                startActivity(new Intent(activity, BrowseRecordsActivity.class));
+//            }
+//        });
+
+//        test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(activity, IncomeStatementActivity.class));
+//            }
+//        });
+//        View view = inflater.inflate(R.layout.fragment_home, container, false);
         initdata(view);
-        return view;
+        textView_page01= getViewById(R.id.home_page01);
+        textView_page02= getViewById(R.id.home_page02);
+        textView_page03= getViewById(R.id.home_page03);
+        textView_page04= getViewById(R.id.home_page04);
+        textView_page05= getViewById(R.id.home_page05);
+        textView_page06= getViewById(R.id.home_page06);
+        textView_page07= getViewById(R.id.home_page07);
+        textView_page08= getViewById(R.id.home_page08);
+        textView_page09= getViewById(R.id.home_page09);
+        textView_page10= getViewById(R.id.home_page10);
+
+        textView_page01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
+            }
+        });
+        textView_page02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
+            }
+        });
+        textView_page03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
+            }
+        });
+        textView_page04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
+            }
+        });
+        textView_page05.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
+            }
+        });
+        textView_page06.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, ZeroPackageActivity.class));
+            }
+        });
+        textView_page07.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, WomanclothingActivity.class));
+            }
+        });
+        textView_page08.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, TaoCatWelfareActivity.class));
+            }
+        });
+        textView_page09.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
+            }
+        });
+        textView_page10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, NewTutorialActivity.class));
+            }
+        });
     }
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_home;
+    }
+
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_home, container, false);
+//        initdata(view);
+//        textView_page09= getViewById(R.id.home_page09);
+//        textView_page09.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(activity, DailyLotteryActivity.class));
+//            }
+//        });
+//        return view;
+//
+//    }
+
+
+
 
     /**
      * 初始化
@@ -67,7 +209,6 @@ public class Home extends Fragment {
         }
     });
     banner.start();
-
     //设置recy
     recyclerView = view.findViewById(R.id.home_recy);
     list = new ArrayList<>();
@@ -91,9 +232,7 @@ public class Home extends Fragment {
         Log.d(TAG, "initdata: ");
         Log.d(TAG, "initdata: ");
         Log.d(TAG, "initdata: ");
-
     }
-
 
     //重写图片加载器
     public class GlideImageLoader extends ImageLoader{
@@ -107,10 +246,6 @@ public class Home extends Fragment {
             Glide.with(context).load(path).into(imageView);
         }
     }
-
-
-
-
     /**
      * 轮播图地址
      */
@@ -133,6 +268,8 @@ public class Home extends Fragment {
         bean.setTitle("标题");
         bean.setVolume(9999);
         bean.setImageURL("http://scimg.jb51.net/allimg/151127/14-15112G0124E52.jpg");
-
     }
+
+
+
 }

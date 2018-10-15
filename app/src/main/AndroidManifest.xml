@@ -15,14 +15,27 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.IncomeStatementActivity" />
         <activity android:name=".activity.HelpActivity" />
         <activity android:name=".activity.AllRecordsActivity" />
-        <activity android:name=".activity.BrowseRecordsActivity"></activity>
+        <activity android:name=".activity.BrowseRecordsActivity"/>
+        <activity android:name=".activity.home.DailyLotteryActivity"/>
+        <activity android:name=".activity.home.TaoCatWelfareActivity"/>
+        <activity android:name=".activity.home.NewTutorialActivity"/>
+        <activity android:name=".activity.home.WomanclothingActivity"/>
+        <activity android:name=".activity.home.ZeroPackageActivity"/>
+
+
+
+
+
+        <activity android:name=".activity.goodsDetail.ProductInfoActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

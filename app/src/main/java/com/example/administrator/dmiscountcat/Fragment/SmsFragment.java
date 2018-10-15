@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.example.administrator.dmiscountcat.R;
 import com.example.administrator.dmiscountcat.activity.AllRecordsActivity;
-import com.example.administrator.dmiscountcat.adapter.AllRecordsAdapter;
+import com.example.administrator.dmiscountcat.Adapter.AllRecordsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,8 +70,4 @@ public class SmsFragment extends Fragment {
         super.onDestroy();
 
     }
-
-
-
-
 }

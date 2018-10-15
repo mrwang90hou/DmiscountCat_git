@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <include layout="@layout/toolbar_custom" />
+    tools:context=".activity.home.TaoCatWelfareActivity">
+    <include layout="@layout/title_layout"/>
+    <!--<include layout="@layout/toolbar_custom" />-->
 
     <com.gigamole.navigationtabstrip.NavigationTabStrip
         android:id="@+id/nts_top"
@@ -19,7 +22,6 @@
         app:nts_titles="@array/activity_home_page08_view_titles"
         app:nts_size="15sp"
         app:nts_weight="3dp" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:background="@color/white"

@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.administrator.dmiscountcat.adapter.HomeAdapter;
+import com.example.administrator.dmiscountcat.Adapter.HomeAdapter;
 import com.example.administrator.dmiscountcat.Bean.HomeBean;
 import com.example.administrator.dmiscountcat.R;
 

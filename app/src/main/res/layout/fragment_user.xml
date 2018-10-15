@@ -189,6 +189,7 @@
             android:layout_width="2dp"
             android:layout_height="match_parent"/>
         <LinearLayout
+            android:id="@+id/ll_income_statement2"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_width="0dp"

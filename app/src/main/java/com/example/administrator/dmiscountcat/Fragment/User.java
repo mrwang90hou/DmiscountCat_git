@@ -15,6 +15,7 @@ import com.example.administrator.dmiscountcat.activity.AllRecordsActivity;
 import com.example.administrator.dmiscountcat.activity.BrowseRecordsActivity;
 import com.example.administrator.dmiscountcat.activity.HelpActivity;
 import com.example.administrator.dmiscountcat.activity.IncomeStatementActivity;
+import com.example.administrator.dmiscountcat.activity.home.DailyLotteryActivity;
 import com.example.administrator.dmiscountcat.base.BaseActivity;
 import com.example.administrator.dmiscountcat.base.BaseFragment;
 
@@ -22,13 +23,15 @@ import com.example.administrator.dmiscountcat.base.BaseFragment;
  * A simple {@link Fragment} subclass.
  */
 public class User extends BaseFragment {
-    Activity activity ;
+    Activity activity;
     LinearLayout llIncomeStatement;
+    LinearLayout llIncomeStatement2;
     LinearLayout llAccountDetails;
     LinearLayout llHelp;
     LinearLayout llBrowseRecords;
 
     public User() {
+
     }
 
 
@@ -39,11 +42,20 @@ public class User extends BaseFragment {
         llAccountDetails =  getViewById(R.id.ll_account_details);
         llHelp =  getViewById(R.id.ll_help);
         llBrowseRecords =  getViewById(R.id.ll_browse_records);
+        llIncomeStatement2 =  getViewById(R.id.ll_income_statement2);
+
+
 
         llIncomeStatement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(activity, IncomeStatementActivity.class));
+            }
+        });
+        llIncomeStatement2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, DailyLotteryActivity.class));
             }
         });
         llAccountDetails.setOnClickListener(new View.OnClickListener() {
