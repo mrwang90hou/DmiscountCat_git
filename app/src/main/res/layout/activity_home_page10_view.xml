@@ -7,8 +7,6 @@
     tools:context=".activity.home.NewTutorialActivity">
     <include layout="@layout/title_layout"/>
     <!--<include layout="@layout/toolbar_custom" />-->
-
-
     <!-- ListView 由item.xml里的TextView给值 。-->
     <ListView
         android:id="@+id/listView1"

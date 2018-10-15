@@ -74,7 +74,6 @@ public class ZeroPackageActivity extends BaseActivity {
         adapter = new BrowseRecordsAdapter(list,this);
         rvBrowseRecords.setAdapter(adapter);
     }
-
     @Override
     public void initData() {
 

@@ -27,6 +27,7 @@ import com.example.administrator.dmiscountcat.activity.HelpActivity;
 import com.example.administrator.dmiscountcat.activity.IncomeStatementActivity;
 import com.example.administrator.dmiscountcat.activity.goodsDetail.ProductInfoActivity;
 import com.example.administrator.dmiscountcat.activity.home.DailyLotteryActivity;
+import com.example.administrator.dmiscountcat.activity.home.MessageNotiActivity;
 import com.example.administrator.dmiscountcat.activity.home.NewTutorialActivity;
 import com.example.administrator.dmiscountcat.activity.home.TaoCatWelfareActivity;
 import com.example.administrator.dmiscountcat.activity.home.WomanclothingActivity;
@@ -55,6 +56,11 @@ public class Home extends BaseFragment {
 
 
 
+    /*消息通知、（订单详情？）*/
+    ImageView message_img;
+
+
+
     /*主页10个功能模块儿按钮*/
     TextView textView_page01;
     TextView textView_page02;
@@ -77,18 +83,30 @@ public class Home extends BaseFragment {
     public Home() {
         // Required empty public constructor
     }
-
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         activity = getActivity();
-        homeProductInfoDetails = getViewById(R.id.home_recy);
-        homeProductInfoDetails.setOnClickListener(new View.OnClickListener() {
+//        homeProductInfoDetails = getViewById(R.id.home_recy);
+//        homeProductInfoDetails.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(activity, ProductInfoActivity.class));
+//            }
+//        });
+        initdata(view);
+
+
+
+        //
+        //    /*消息通知、（订单详情？）*/
+        message_img = getViewById(R.id.message_img);
+        message_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity, ProductInfoActivity.class));
+                startActivity(new Intent(activity, MessageNotiActivity.class));
             }
         });
-        initdata(view);
+        //    /*主页10个功能模块儿按钮*/
         textView_page01= getViewById(R.id.home_page01);
         textView_page02= getViewById(R.id.home_page02);
         textView_page03= getViewById(R.id.home_page03);

@@ -10,11 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="2dp"
-        android:background="@color/lightgrey"
+        android:background="@color/navigation_bg_color"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         />
 
+    <!--android:background="@color/lightgrey"-->
 
 
 </LinearLayout>
