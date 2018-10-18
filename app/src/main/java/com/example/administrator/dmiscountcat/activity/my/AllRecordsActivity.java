@@ -69,6 +69,8 @@ public class AllRecordsActivity extends BaseActivity {
         rlSrcTitel = findViewById(R.id.sec_title_layout);
         titleText = findViewById(R.id.title_text);
         titleText.setVisibility(View.VISIBLE);
+        titleText.setText(getResources(R.string.user2));
+        titleText.setTextColor(getResources().getColor(R.color.white));
         ib_back =  this.findViewById(R.id.title_sec_left);
         ib_back.setImageDrawable(getResources().getDrawable(R.drawable.home_icon_righttop_return02));
         ivTitleLine =  this.findViewById(R.id.ivTitleLine);

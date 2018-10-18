@@ -31,19 +31,8 @@ import com.example.administrator.dmiscountcat.base.BaseFragment;
 public class User extends BaseFragment implements View.OnClickListener{
     Activity activity;
     LinearLayout llIncomeStatement;
-//    LinearLayout llIncomeStatement2;
-
     LinearLayout llMyPartner;
     LinearLayout llPartnerOrder;
-
-//    <string name="user1">浏览足迹</string>
-//    <string name="user2">账户明细</string>
-//    <string name="user3">邀请好友</string>
-//    <string name="user4">我的订单</string>
-//    <string name="user5">兑换中心</string>
-//    <string name="user6">充值中心</string>
-//    <string name="user7">帮助中心</string>
-//    <string name="user8">设置</string>
 
     LinearLayout llBrowseRecords;
     LinearLayout llAccountDetails;

@@ -34,8 +34,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             app:cardCornerRadius="15dp"
-            android:layout_weight="8">
+            android:layout_weight="8"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+            <!--取消EditText焦点-->
             <EditText
+                android:focusable="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingLeft="5dp"

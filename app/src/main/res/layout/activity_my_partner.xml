@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:background="@color/lavender"
     android:orientation="vertical"
-    tools:context=".activity.MyPartnerActivity">
+    tools:context=".activity.my.MyPartnerActivity">
 
 
     <include layout="@layout/title_layout"/>

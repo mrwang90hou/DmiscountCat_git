@@ -17,12 +17,12 @@ public class WomanclothingActivity extends BaseActivity {
 //
     @Override
     protected int getFragmentContentId() {
-        return R.layout.activity_home_page06_view;
+        return R.layout.activity_home_page07_view;
     }
 //
     @Override
     public void setContentView() {
-//        setContentView(R.layout.activity_home_page07_view);
+        setContentView(R.layout.activity_home_page07_view);
     }
 
     @Override
