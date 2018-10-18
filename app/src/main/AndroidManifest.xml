@@ -42,6 +42,9 @@
         <activity android:name=".activity.home.MessageNotiActivity"/>
         <activity android:name=".activity.home.Convert"/>
         <activity android:name=".activity.home.Recharge"/>
+        <activity android:name=".activity.home.Indent"/>
+        <activity android:name=".activity.home.Invite"/>
+        <activity android:name=".activity.home.Setting"/>
 
 
         <activity android:name=".activity.goodsDetail.ProductInfoActivity">
