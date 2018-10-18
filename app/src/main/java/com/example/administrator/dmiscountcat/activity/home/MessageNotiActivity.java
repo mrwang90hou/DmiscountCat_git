@@ -84,7 +84,7 @@ public class MessageNotiActivity extends BaseActivity {
                 finish();
             }
         });
-
+        titleText.setText(getResources(R.string.home_message));
         smsFragment  =new SmsFragment();
         phoneFragment =new SmsFragment();
 //        mFragments.add(smsFragment);
