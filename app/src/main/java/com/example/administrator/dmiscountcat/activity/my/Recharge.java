@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.activity.home;
+package com.example.administrator.dmiscountcat.activity.my;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

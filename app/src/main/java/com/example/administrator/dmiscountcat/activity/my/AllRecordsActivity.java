@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.activity;
+package com.example.administrator.dmiscountcat.activity.my;
 
 import android.annotation.SuppressLint;
 import android.support.design.widget.TabLayout;

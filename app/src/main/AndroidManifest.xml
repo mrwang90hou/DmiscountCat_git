@@ -30,21 +30,21 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".activity.IncomeStatementActivity" />
-        <activity android:name=".activity.HelpActivity" />
-        <activity android:name=".activity.AllRecordsActivity" />
-        <activity android:name=".activity.BrowseRecordsActivity"/>
+        <activity android:name=".activity.my.IncomeStatementActivity" />
+        <activity android:name=".activity.my.HelpActivity" />
+        <activity android:name=".activity.my.AllRecordsActivity" />
+        <activity android:name=".activity.my.BrowseRecordsActivity"/>
         <activity android:name=".activity.home.DailyLotteryActivity"/>
         <activity android:name=".activity.home.TaoCatWelfareActivity"/>
         <activity android:name=".activity.home.NewTutorialActivity"/>
         <activity android:name=".activity.home.WomanclothingActivity"/>
         <activity android:name=".activity.home.ZeroPackageActivity"/>
         <activity android:name=".activity.home.MessageNotiActivity"/>
-        <activity android:name=".activity.home.Convert"/>
-        <activity android:name=".activity.home.Recharge"/>
-        <activity android:name=".activity.home.Indent"/>
-        <activity android:name=".activity.home.Invite"/>
-        <activity android:name=".activity.home.Setting"/>
+        <activity android:name=".activity.my.Convert"/>
+        <activity android:name=".activity.my.Recharge"/>
+        <activity android:name=".activity.my.Indent"/>
+        <activity android:name=".activity.my.Invite"/>
+        <activity android:name=".activity.my.Setting"/>
 
 
         <activity android:name=".activity.goodsDetail.ProductInfoActivity">

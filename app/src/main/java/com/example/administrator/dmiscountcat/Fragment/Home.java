@@ -5,26 +5,18 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.administrator.dmiscountcat.Adapter.HomeAdapter;
 import com.example.administrator.dmiscountcat.Bean.HomeBean;
 import com.example.administrator.dmiscountcat.R;
-import com.example.administrator.dmiscountcat.activity.AllRecordsActivity;
-import com.example.administrator.dmiscountcat.activity.BrowseRecordsActivity;
-import com.example.administrator.dmiscountcat.activity.HelpActivity;
-import com.example.administrator.dmiscountcat.activity.IncomeStatementActivity;
 import com.example.administrator.dmiscountcat.activity.goodsDetail.ProductInfoActivity;
 import com.example.administrator.dmiscountcat.activity.home.DailyLotteryActivity;
 import com.example.administrator.dmiscountcat.activity.home.MessageNotiActivity;
@@ -94,10 +86,6 @@ public class Home extends BaseFragment {
 //            }
 //        });
         initdata(view);
-
-
-
-        //
         //    /*消息通知、（订单详情？）*/
         message_img = getViewById(R.id.message_img);
         message_img.setOnClickListener(new View.OnClickListener() {
@@ -198,10 +186,6 @@ public class Home extends BaseFragment {
 //        return view;
 //
 //    }
-
-
-
-
     /**
      * 初始化
      */

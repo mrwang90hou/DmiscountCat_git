@@ -45,6 +45,10 @@ public class NewTutorialActivity extends BaseActivity {
         });
         titleText.setText(getResources(R.string.home_icon10));
         titleText.setTextColor(getResources().getColor(R.color.white));
+
+
+
+
     }
 
     @Override

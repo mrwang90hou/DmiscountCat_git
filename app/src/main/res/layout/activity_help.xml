@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".activity.HelpActivity">
+    tools:context=".activity.my.HelpActivity">
 
     <include layout="@layout/title_layout"/>
 

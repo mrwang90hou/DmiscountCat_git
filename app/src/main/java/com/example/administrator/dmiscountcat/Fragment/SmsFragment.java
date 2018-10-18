@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.example.administrator.dmiscountcat.R;
-import com.example.administrator.dmiscountcat.activity.AllRecordsActivity;
+import com.example.administrator.dmiscountcat.activity.my.AllRecordsActivity;
 import com.example.administrator.dmiscountcat.Adapter.AllRecordsAdapter;
 
 import java.util.ArrayList;

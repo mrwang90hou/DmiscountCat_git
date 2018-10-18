@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#f4f4f4"
     android:orientation="vertical"
-    tools:context=".activity.home.Setting">
+    tools:context=".activity.my.Setting">
 
     <include layout="@layout/title_layout"></include>
     <!--<View-->
@@ -53,14 +53,14 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
-               <ImageView
-                   android:id="@+id/setting_push"
-                   android:src="@drawable/tab_setting_switch"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/setting_push"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_setting_switch" />
         </LinearLayout>
         <View
-
             android:alpha="0.3"
             android:background="@color/icon_grey"
             android:layout_width="match_parent"
@@ -77,34 +77,40 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
+
             <ImageView
                 android:id="@+id/setting_seek"
-                android:src="@drawable/tab_setting_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_setting_switch" />
         </LinearLayout>
         <View
-
             android:alpha="0.3"
             android:background="@color/icon_grey"
             android:layout_width="match_parent"
             android:layout_height="1dp"/>
         <LinearLayout
+            android:id="@+id/setting_cache"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
                 android:text="清理缓存"
-                android:textSize="@dimen/setting_textSize"
+                android:textSize="@dimen/font_text_size_18"
                 android:textColor="#6e6e6e"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
-            <ImageView
-                android:id="@+id/setting_cache"
-                android:src="@drawable/tab_setting_switch"
+
+            <TextView
+                android:text="18.13MB"
+                android:textSize="15sp"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@mipmap/setting_0"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
@@ -132,7 +138,7 @@
                 android:layout_height="wrap_content" />
             <ImageView
                 android:src="@mipmap/setting_0"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
@@ -156,7 +162,7 @@
                 android:layout_height="wrap_content" />
             <ImageView
                 android:src="@mipmap/setting_0"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <View
@@ -183,11 +189,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                android:id="@+id/setting_update"
                 android:layout_marginLeft="5dp"
                 android:textColor="#fd7848"
                 android:text="可更新！"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/setting_logout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/black_gray"
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

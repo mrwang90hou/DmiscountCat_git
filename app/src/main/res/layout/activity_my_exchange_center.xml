@@ -7,15 +7,14 @@
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#f4f4f4"
     android:orientation="vertical"
-    tools:context=".activity.home.Convert">
-
+    tools:context=".activity.my.Convert">
 
     <include layout="@layout/title_layout"></include>
 
     <!--<View-->
-        <!--android:background="@color/theme"-->
+        <!--android:background="@color/theme"-->```
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="25dp"/>-->
     <!--<RelativeLayout-->

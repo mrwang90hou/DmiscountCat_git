@@ -1,4 +1,4 @@
-package com.example.administrator.dmiscountcat.activity;
+package com.example.administrator.dmiscountcat.activity.my;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,7 +36,7 @@ public class HelpActivity extends BaseActivity {
         titleText = getViewById(R.id.title_text);
         titleLeft.setImageDrawable(getResources().getDrawable(R.drawable.home_icon_righttop_return02));
         rlSecTitleLayout = getViewById(R.id.sec_title_layout);
-        rlSecTitleLayout.setBackgroundColor(getResources().getColor(R.color.orange1));
+        rlSecTitleLayout.setBackgroundColor(getResources().getColor(R.color.navigation_bg_color));
         titleLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
