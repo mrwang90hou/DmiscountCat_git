@@ -40,6 +40,8 @@
         <activity android:name=".activity.home.WomanclothingActivity"/>
         <activity android:name=".activity.home.ZeroPackageActivity"/>
         <activity android:name=".activity.home.MessageNotiActivity"/>
+        <activity android:name=".activity.my.MyPartnerActivity"/>
+        <activity android:name=".activity.my.PartnerOrderActivity"/>
         <activity android:name=".activity.my.Convert"/>
         <activity android:name=".activity.my.Recharge"/>
         <activity android:name=".activity.my.Indent"/>

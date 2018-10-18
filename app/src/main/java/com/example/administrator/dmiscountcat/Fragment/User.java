@@ -13,6 +13,8 @@ import com.example.administrator.dmiscountcat.activity.my.IncomeStatementActivit
 
 
 import com.example.administrator.dmiscountcat.activity.my.BrowseRecordsActivity;
+import com.example.administrator.dmiscountcat.activity.my.MyPartnerActivity;
+import com.example.administrator.dmiscountcat.activity.my.PartnerOrderActivity;
 import com.example.administrator.dmiscountcat.activity.my.AllRecordsActivity;
 import com.example.administrator.dmiscountcat.activity.my.Invite;
 import com.example.administrator.dmiscountcat.activity.my.Indent;
@@ -29,8 +31,10 @@ import com.example.administrator.dmiscountcat.base.BaseFragment;
 public class User extends BaseFragment implements View.OnClickListener{
     Activity activity;
     LinearLayout llIncomeStatement;
-    LinearLayout llIncomeStatement2;
+//    LinearLayout llIncomeStatement2;
 
+    LinearLayout llMyPartner;
+    LinearLayout llPartnerOrder;
 
 //    <string name="user1">浏览足迹</string>
 //    <string name="user2">账户明细</string>
@@ -60,8 +64,8 @@ public class User extends BaseFragment implements View.OnClickListener{
     protected void initView(View view, Bundle savedInstanceState) {
         activity = getActivity();
         llIncomeStatement =  getViewById(R.id.ll_income_statement);
-        llIncomeStatement2 =  getViewById(R.id.ll_income_statement2);
-
+        llMyPartner =  getViewById(R.id.ll_my_partner);
+        llPartnerOrder =  getViewById(R.id.ll_partner_order);
 
 
         llBrowseRecords =  getViewById(R.id.ll_browse_records);
@@ -75,7 +79,9 @@ public class User extends BaseFragment implements View.OnClickListener{
 
 
         llIncomeStatement.setOnClickListener(this);
-        llIncomeStatement2.setOnClickListener(this);
+        llMyPartner.setOnClickListener(this);
+        llPartnerOrder.setOnClickListener(this);
+
         llBrowseRecords.setOnClickListener(this);
         llAccountDetails.setOnClickListener(this);
         llInviteFriends.setOnClickListener(this);
@@ -131,15 +137,12 @@ public class User extends BaseFragment implements View.OnClickListener{
             case R.id.ll_income_statement:
                 startActivity(new Intent(activity, IncomeStatementActivity.class));
                 break;
-            case R.id.ll_income_statement2:
-                startActivity(new Intent(activity, IncomeStatementActivity.class));
+            case R.id.ll_my_partner:    //合伙人
+                startActivity(new Intent(activity, MyPartnerActivity.class));
                 break;
-//            case R.id.setting_logout:
-//                Toast.makeText(this,"注销账户！",Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.ll_income_statement:
-//                startActivity(new Intent(activity, IncomeStatementActivity.class));
-//                break;
+            case R.id.ll_partner_order: //合伙人订单
+                startActivity(new Intent(activity, PartnerOrderActivity.class));
+                break;
             
             case R.id.ll_browse_records:
                 startActivity(new Intent(activity, BrowseRecordsActivity.class));

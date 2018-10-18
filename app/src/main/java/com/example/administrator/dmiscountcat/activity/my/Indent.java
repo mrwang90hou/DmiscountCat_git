@@ -51,7 +51,6 @@ public class Indent extends AppCompatActivity implements View.OnClickListener {
             case R.id.indent_cancel:    initColor();cancel.setSelected(true);    break;
 //            case R.id.indent_back:finish();
 
-
         }
     }
 

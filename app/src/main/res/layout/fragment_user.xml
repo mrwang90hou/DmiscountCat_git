@@ -189,7 +189,7 @@
             android:layout_width="2dp"
             android:layout_height="match_parent"/>
         <LinearLayout
-            android:id="@+id/ll_income_statement2"
+            android:id="@+id/ll_my_partner"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_width="0dp"
@@ -230,6 +230,7 @@
             android:layout_width="2dp"
             android:layout_height="match_parent"/>
         <LinearLayout
+            android:id="@+id/ll_partner_order"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_width="0dp"
