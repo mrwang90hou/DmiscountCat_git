@@ -50,6 +50,7 @@ dependencies {
             url 'http://dl.bintray.com/gigamole/maven/'
         }
     }
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 //    compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:+'
     implementation 'com.github.devlight.navigationtabstrip:navigationtabstrip:+'

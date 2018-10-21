@@ -20,7 +20,7 @@ import com.example.administrator.dmiscountcat.activity.my.Indent;
 import com.example.administrator.dmiscountcat.activity.my.Convert;
 import com.example.administrator.dmiscountcat.activity.my.Recharge;
 import com.example.administrator.dmiscountcat.activity.my.HelpActivity;
-import com.example.administrator.dmiscountcat.activity.my.Setting;
+import com.example.administrator.dmiscountcat.activity.my.SettingsActivity;
 
 import com.example.administrator.dmiscountcat.base.BaseFragment;
 
@@ -172,7 +172,7 @@ public class User extends BaseFragment implements View.OnClickListener{
                 break;
 
             case R.id.ll_my_setting:
-                startActivity(new Intent(activity, Setting.class));
+                startActivity(new Intent(activity, SettingsActivity.class));
                 break;
 
         }

@@ -43,7 +43,7 @@
         <activity android:name=".activity.my.Recharge"/>
         <activity android:name=".activity.my.Indent"/>
         <activity android:name=".activity.my.Invite"/>
-        <activity android:name=".activity.my.Setting"/>
+        <activity android:name=".activity.my.SettingsActivity"/>
         <activity android:name=".activity.my.Generalize"/>
         <activity android:name=".activity.my.PartnerCenter"/>
         <activity android:name=".activity.my.CommonProblems"/>

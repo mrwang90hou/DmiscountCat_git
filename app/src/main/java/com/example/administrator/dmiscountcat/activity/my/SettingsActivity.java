@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,13 +13,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.DialogAction;
 import com.example.administrator.dmiscountcat.R;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.administrator.dmiscountcat.base.BaseActivity;
 import com.vondear.rxui.view.dialog.RxDialog;
 import com.vondear.rxui.view.dialog.RxDialogSure;
 import com.vondear.rxui.view.dialog.RxDialogTool;
 
-public class Setting extends BaseActivity implements View.OnClickListener {
+public class SettingsActivity extends BaseActivity implements View.OnClickListener {
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +121,36 @@ public class Setting extends BaseActivity implements View.OnClickListener {
 //        });
 //        seek.setOnClickListener(this);
 //        cache.setOnClickListener(this);
+
+//        llcache.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                new MaterialDialog.Builder(SettingsActivity.this)
+//                        .title("清除缓存数据")
+//                        .content("将会清除所有的缓存数据")
+//                        .positiveText("确认")
+//                        .negativeText("取消")
+//                        .icon(getResources().getDrawable(R.drawable.ic_warning_outline_white))
+//                        .onPositive(new MaterialDialog.SingleButtonCallback() {
+//                            @Override
+//                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                                dialog.dismiss();
+//                            }
+//                        })
+//
+//                        .onNegative(new MaterialDialog.SingleButtonCallback() {
+//                            @Override
+//                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//
+//                                dialog.dismiss();
+//                            }
+//                        })
+//                        .show();
+//            }
+//        });
+
+
+
     }
     @Override
     public void initData() {
@@ -167,5 +200,27 @@ public class Setting extends BaseActivity implements View.OnClickListener {
 
 //        rxDialog.setTitle("--提示--");
 //        //rxDialog.setContentView();
+
+        new MaterialDialog.Builder(SettingsActivity.this)
+                .title("清除缓存数据")
+                .content("将会清除所有的缓存数据")
+                .positiveText("确认")
+                .negativeText("取消")
+                .icon(getResources().getDrawable(R.drawable.ic_warning_outline_white))
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                        dialog.dismiss();
+                    }
+                })
+
+                .onNegative(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+
+                        dialog.dismiss();
+                    }
+                })
+                .show();
     }
 }
