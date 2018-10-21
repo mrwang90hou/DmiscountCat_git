@@ -125,6 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"/>
     <LinearLayout
+        android:id="@+id/ll_partner_center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
@@ -135,7 +136,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:text="合伙人 中心"/>
+            android:text="合伙人中心"/>
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"

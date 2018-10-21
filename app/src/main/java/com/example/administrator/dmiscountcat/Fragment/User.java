@@ -10,9 +10,8 @@ import android.widget.LinearLayout;
 
 import com.example.administrator.dmiscountcat.R;
 import com.example.administrator.dmiscountcat.activity.my.IncomeStatementActivity;
-
-
 import com.example.administrator.dmiscountcat.activity.my.BrowseRecordsActivity;
+import com.example.administrator.dmiscountcat.activity.my.PartnerCenter;
 import com.example.administrator.dmiscountcat.activity.my.MyPartnerActivity;
 import com.example.administrator.dmiscountcat.activity.my.PartnerOrderActivity;
 import com.example.administrator.dmiscountcat.activity.my.AllRecordsActivity;
@@ -30,9 +29,13 @@ import com.example.administrator.dmiscountcat.base.BaseFragment;
  */
 public class User extends BaseFragment implements View.OnClickListener{
     Activity activity;
+    LinearLayout llPartnerCenter;
+
+
     LinearLayout llIncomeStatement;
     LinearLayout llMyPartner;
     LinearLayout llPartnerOrder;
+
 
     LinearLayout llBrowseRecords;
     LinearLayout llAccountDetails;
@@ -52,6 +55,9 @@ public class User extends BaseFragment implements View.OnClickListener{
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         activity = getActivity();
+        llPartnerCenter = getViewById(R.id.ll_partner_center);
+
+
         llIncomeStatement =  getViewById(R.id.ll_income_statement);
         llMyPartner =  getViewById(R.id.ll_my_partner);
         llPartnerOrder =  getViewById(R.id.ll_partner_order);
@@ -123,6 +129,10 @@ public class User extends BaseFragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+
+            case R.id.ll_partner_center:
+                startActivity(new Intent(activity, PartnerCenter.class));
+                break;
             case R.id.ll_income_statement:
                 startActivity(new Intent(activity, IncomeStatementActivity.class));
                 break;
@@ -132,7 +142,7 @@ public class User extends BaseFragment implements View.OnClickListener{
             case R.id.ll_partner_order: //合伙人订单
                 startActivity(new Intent(activity, PartnerOrderActivity.class));
                 break;
-            
+            /*******/
             case R.id.ll_browse_records:
                 startActivity(new Intent(activity, BrowseRecordsActivity.class));
                 break;

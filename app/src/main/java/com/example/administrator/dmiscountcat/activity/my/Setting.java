@@ -1,5 +1,8 @@
 package com.example.administrator.dmiscountcat.activity.my;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,6 +14,9 @@ import android.widget.Toast;
 
 import com.example.administrator.dmiscountcat.R;
 import com.example.administrator.dmiscountcat.base.BaseActivity;
+import com.vondear.rxui.view.dialog.RxDialog;
+import com.vondear.rxui.view.dialog.RxDialogSure;
+import com.vondear.rxui.view.dialog.RxDialogTool;
 
 public class Setting extends BaseActivity implements View.OnClickListener {
 
@@ -32,18 +38,23 @@ public class Setting extends BaseActivity implements View.OnClickListener {
 //        is_push = !is_push;
 //    }
 
+    Activity activity;
     private ImageView titleLeft;
     private TextView titleText;
     private RelativeLayout rlSecTitleLayout;
     private ImageView push,seek;
     private LinearLayout llcache;
+    private LinearLayout llHelpCenter;
+
     private boolean is_push=false,is_seek=false,is_cache=false;
 
     private TextView updateBtn;
     private TextView settingLogout;
+//    final RxDialogSure rxDialogSure = new RxDialogSure(this);
+//    final RxDialog rxDialog = new RxDialog(this);
+//    final RxDialogTool rxDialogTool;
 
-
-
+//    ToastDialog logoutDialog = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +78,9 @@ public class Setting extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void initView() {
+
+//        activity = getActivity();
+
         titleLeft = getViewById(R.id.title_sec_left);
         titleText = getViewById(R.id.title_text);
         titleLeft.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +102,9 @@ public class Setting extends BaseActivity implements View.OnClickListener {
         push = findViewById(R.id.setting_push);
         seek = findViewById(R.id.setting_seek);
         llcache = findViewById(R.id.setting_cache);
+        llHelpCenter = findViewById(R.id.ll_help_center);
+
+
         updateBtn = findViewById(R.id.setting_update);
         settingLogout = findViewById(R.id.setting_logout);
         push.setSelected(!is_push);
@@ -120,7 +137,10 @@ public class Setting extends BaseActivity implements View.OnClickListener {
             case R.id.setting_push: push.setSelected(!is_push); is_push = !is_push;  break;
             case R.id.setting_seek: seek.setSelected(!is_seek);is_seek = !is_seek ;break;
             case R.id.setting_cache:
-                Toast.makeText(this,"清除缓存！",Toast.LENGTH_SHORT).show();
+                showLogoutDialog();
+                break;
+            case R.id.ll_help_center:
+                startActivity(new Intent(new Activity(), HelpActivity.class));
                 break;
             case R.id.setting_update:
                 Toast.makeText(this,"版本升级！",Toast.LENGTH_SHORT).show();
@@ -129,5 +149,23 @@ public class Setting extends BaseActivity implements View.OnClickListener {
                 Toast.makeText(this,"注销账户！",Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+    private void showLogoutDialog(){
+        Toast.makeText(this,"清除缓存！",Toast.LENGTH_SHORT).show();
+//        rxDialogSure.setTitle("--提示--");
+////                rxDialogSure.getLogoView(R.drawable.logo);
+////                rxDialogSure.setLogo(R.drawable.logo);
+//        rxDialogSure.setContent("是否确认清除缓存？");
+//        rxDialogSure.setSure("确认");
+//        rxDialogSure.setSureListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                rxDialogSure.cancel();
+//            }
+//        });
+//        rxDialogSure.show();
+
+//        rxDialog.setTitle("--提示--");
+//        //rxDialog.setContentView();
     }
 }

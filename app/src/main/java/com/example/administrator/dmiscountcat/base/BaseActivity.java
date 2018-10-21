@@ -16,6 +16,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initActivity();
         initView();
         initData();
+
     }
 
     @Override

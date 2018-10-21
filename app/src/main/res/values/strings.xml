@@ -66,9 +66,11 @@
 
 
     <!--titile-->
-    <string name="title_income_statement">收益报表</string>
     <string name="title_help">帮助中心</string>
     <string name="title_browse_records">浏览记录</string>
+
+    <string name="title_partner_center">合伙人中心</string>
+    <string name="title_income_statement">收益报表</string>
     <string name="title_my_partner">合伙人</string>
     <string name="title_partner_order">合伙人订单</string>
 
