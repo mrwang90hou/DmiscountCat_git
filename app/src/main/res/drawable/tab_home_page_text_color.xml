@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--首页导航栏字体颜色-->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="false" android:color="@color/icon_grey"/>
-    <item android:state_selected="true" android:color="@color/home_sousuo"/>
-</selector>

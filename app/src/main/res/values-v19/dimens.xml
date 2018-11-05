@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="status_bar">25dp</dimen>  //4.4版本后使用
-
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="status_bar_height">24dp</dimen>
-</resources>
